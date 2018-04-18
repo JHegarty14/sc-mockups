@@ -1,0 +1,15 @@
+{
+  "name": "servicecorps",
+  "version": "1.0.0",
+  "description": "ServiceCorps Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Hegarty",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^1.5.2",
+    "react-router-dom": "^4.2.2"
+  }
+}
