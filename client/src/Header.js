@@ -3,11 +3,18 @@ import { Row, Col, SideNav, SideNavItem, Button } from 'react-materialize';
 import { Link } from 'react-router-dom';
 
 const fullLogo = require('./images/headerLogo.png');
+const smallLogo = require('./images/headerImg.png');
 
 const flStyle = {
-  height: '30px',
+  height: '38px',
   width: '300px',
-  padding: '5px 0 0 0'
+  margin: '12px 0 5px 0'
+}
+
+const slStyle = {
+  height: '50px',
+  width: '25px',
+  margin: '5px 0 5px 0'
 }
 
 class Header extends Component {
@@ -34,22 +41,22 @@ class Header extends Component {
   render() {
     const { width } = this.state;
     const isMobile = width <= 768;
-    const isLaptop = width <= 1440;
+    const isLaptop = width <= 1100;
 
     if (isMobile) {
       return(
-        <div className='z-depth-0'>
-          <nav className="nav-wrapper">
+        <div className='' style={{ backgroundColor: '#212121' }}>
+          <nav className='nav-wrapper z-depth-0' style={{ backgroundColor: '#212121' }}>
             <div>
               <ul className='left'>
-                <SideNav trigger={<Button><i className='material-icons'>menu</i></Button>}>
-                  <SideNavItem>Test 1</SideNavItem>
-                  <SideNavItem>Test 2</SideNavItem>
+                <SideNav trigger={<i className='material-icons'>menu</i>} style={{ backgroundColor: '#212121' }}>
+                  <SideNavItem><a style={{ color: 'white' }}>Test 1</a></SideNavItem>
+                  <SideNavItem><a style={{ color: 'white' }}>Test 2</a></SideNavItem>
                 </SideNav>
               </ul>
               <ul className='brand-logo right'>
                 <a>
-                  <img href='/' alt='' src={fullLogo} />
+                  <img href='/' alt='' src={smallLogo} style={slStyle} />
                 </a>
               </ul>
             </div>
@@ -58,19 +65,17 @@ class Header extends Component {
       )
     } else if (isLaptop) {
       return(
-        <div className='z-depth-0'>
-          <nav className='nav-wrapper'>
+        <div className='z-depth-0 #212121 grey darken-4'>
+          <nav className='nav-wrapper z-depth-0' style={{ backgroundColor: '#212121' }}>
             <div>
               <ul className='left'>
-                <SideNav trigger={<Button><i className='material-icons'>menu</i></Button>}>
-                  <SideNavItem>Test 1</SideNavItem>
-                  <SideNavItem>Test 2</SideNavItem>
+                <SideNav trigger={<i className='material-icons' style={{ padding: '0 0 0 8px'}}>menu</i>} style={{ backgroundColor: '#212121' }}>
+                  <SideNavItem><a style={{ color: 'white' }}>Test 1</a></SideNavItem>
+                  <SideNavItem><a style={{ color: 'white' }}>Test 2</a></SideNavItem>
                 </SideNav>
               </ul>
               <ul className='brand-logo right'>
-                <a>
-                  <img href='/' alt='' src={fullLogo} style={flStyle}/>
-                </a>
+                <img href='/' alt='' src={fullLogo} style={flStyle}/>
               </ul>
             </div>
           </nav>
@@ -79,12 +84,15 @@ class Header extends Component {
     } else {
       return(
         <div className='z-depth-0'>
-         <SideNav fixed>
-            <SideNavItem>Test 1</SideNavItem>
-            <SideNavItem>Test 2</SideNavItem>
+         <SideNav fixed style={{ backgroundColor: '#212121' }}>
+            <SideNavItem><a style={{ color: 'white' }}>Test 1</a></SideNavItem>
+            <SideNavItem><a style={{ color: 'white' }}>Test 2</a></SideNavItem>
           </SideNav>
-          <nav className='nav-wrapper'>
+          <nav className='nav-wrapper z-depth-0' style={{ backgroundColor: '#212121' }}>
             <div>
+              <ul className='brand-logo right'>
+                <img src={fullLogo} style={flStyle} />
+              </ul>
             </div>
           </nav>
         </div>
