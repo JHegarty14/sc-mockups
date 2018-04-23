@@ -66,16 +66,15 @@ class Header extends Component {
     } else if (isLaptop) {
       return(
         <div className='z-depth-0 #212121 grey darken-4'>
-          <nav className='nav-wrapper z-depth-0' style={{ backgroundColor: '#212121' }}>
+          <nav className='nav-wrapper z-depth-0' style={{ backgroundColor: '#212121', padding: '0 20px 0 20px' }}>
             <div>
-              <ul className='left'>
-                <SideNav trigger={<i className='material-icons' style={{ padding: '0 0 0 8px'}}>menu</i>} style={{ backgroundColor: '#212121' }}>
-                  <SideNavItem><a style={{ color: 'white' }}>Test 1</a></SideNavItem>
-                  <SideNavItem><a style={{ color: 'white' }}>Test 2</a></SideNavItem>
-                </SideNav>
+              <ul>
+                <li><a>Sign Up</a></li>
+                <li>or</li>
+                <li><a>Sign In</a></li>
               </ul>
               <ul className='brand-logo right'>
-                <img href='/' alt='' src={fullLogo} style={flStyle}/>
+                <img href='/' alt='' src={smallLogo} style={slStyle}/>
               </ul>
             </div>
           </nav>
@@ -83,13 +82,14 @@ class Header extends Component {
       )
     } else {
       return(
-        <div className='z-depth-0'>
-         <SideNav fixed style={{ backgroundColor: '#212121' }}>
-            <SideNavItem><a style={{ color: 'white' }}>Test 1</a></SideNavItem>
-            <SideNavItem><a style={{ color: 'white' }}>Test 2</a></SideNavItem>
-          </SideNav>
+        <div className='z-depth-0 #212121 grey darken-4'>
           <nav className='nav-wrapper z-depth-0' style={{ backgroundColor: '#212121' }}>
             <div>
+              <ul>
+                <li><a>Sign Up</a></li>
+                <li>or</li>
+                <li><a>Sign In</a></li>
+              </ul>
               <ul className='brand-logo right'>
                 <img src={fullLogo} style={flStyle} />
               </ul>
