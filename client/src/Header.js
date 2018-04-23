@@ -45,7 +45,7 @@ class Header extends Component {
 
     if (isMobile) {
       return(
-        <div className='' style={{ backgroundColor: '#212121' }}>
+        <div className='z-depth-0' style={{ backgroundColor: '#212121' }}>
           <nav className='nav-wrapper z-depth-0' style={{ backgroundColor: '#212121' }}>
             <div>
               <ul className='left'>
